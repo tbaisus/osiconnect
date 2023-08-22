@@ -1,0 +1,40 @@
+server:
+  port: 4000
+  servlet:
+    context-path: /api/osiconnect
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2MB
+      max-file-size: 5MB
+      max-request-size: 10MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/osi_connect
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+service :
+  aws :
+    s3:
+      credentials:
+        access-key: AKIAWOKRA5JR56RKNBZE
+        secret-key: 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
+      region:
+        static: us-east-1
+      bucketname: bucketunit
+
+application:
+  bucket:
+    name: bucketunit
+
+
