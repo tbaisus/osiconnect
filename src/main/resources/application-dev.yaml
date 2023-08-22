@@ -27,8 +27,8 @@ service :
   aws :
     s3:
       credentials:
-        access-key: AKIAWOKRA5JR56RKNBZE
-        secret-key: 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
+        access-key: 
+        secret-key: 
       region:
         static: us-east-1
       bucketname: bucketunit
